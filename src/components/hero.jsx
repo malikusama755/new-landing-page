@@ -3,7 +3,7 @@ import LoginForm from './loginform'
 
 const Hero = () => {
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div id='home' className="relative w-screen h-screen overflow-hidden">
       {/* Background YouTube Video */}
       <div className="absolute inset-0 z-0">
         <div className="w-[177.77vh] h-screen absolute top-0 left-1/2 -translate-x-1/2">

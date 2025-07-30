@@ -2,7 +2,7 @@ import React from 'react'
 
 const Location = () => {
     return (
-        <div className="bg-amber-700 bg-cover bg-center min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-4 py-10">
+        <div id="location" className="bg-amber-700 bg-cover bg-center min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-4 py-10">
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                   <img src="horizontal.png" alt="" />
             </div>
