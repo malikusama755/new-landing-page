@@ -4,7 +4,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 text-white p-4 flex flex-col sm:flex-row justify-between items-center relative">
+    <nav className="bg-gray-800 text-white p-4 flex flex-col sm:flex-row justify-between items-center z-50 relative">
       <h1 className="text-2xl font-bold mb-2 sm:mb-0">
         Citadel <span className="text-amber-400">7</span>
       </h1>

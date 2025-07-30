@@ -4,13 +4,7 @@ const Location = () => {
     return (
         <div className="bg-amber-700 bg-cover bg-center min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-4 py-10">
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-                  <iframe
-                        src="https://www.youtube.com/embed/ymRGlHe5CLE?autoplay=1&mute=1&controls=1&loop=1&playlist=ymRGlHe5CLE"
-                        title="Citadel 7 Location Video"
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
-                        className="w-full h-full"
-                    ></iframe>
+                  <img src="horizontal.png" alt="" />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-4 sm:p-8 md:p-12 max-w-xl">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Location</h1>
