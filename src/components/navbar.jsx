@@ -1,53 +1,48 @@
-import React, { useState } from "react";
+import React from 'react'
+import LoginForm from './loginform'
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+const Hero = () => {
   return (
-    <nav className="bg-gray-800 text-white p-4 flex flex-col sm:flex-row justify-between items-center z-50 relative">
-      <h1 className="text-2xl font-bold mb-2 sm:mb-0">
-        Citadel <span className="text-amber-400">7</span>
-      </h1>
-      {/* Hamburger Icon */}
-      <button
-        className="sm:hidden absolute right-4 top-4 focus:outline-none"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-      >
-        <svg
-          className="w-7 h-7"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          {menuOpen ? (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          ) : (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 8h16M4 16h16"
-            />
-          )}
-        </svg>
-      </button>
-      {/* Menu */}
-      <ul
-        className={`flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4
-          ${menuOpen ? "block" : "hidden"} sm:flex bg-gray-800 sm:bg-transparent absolute sm:static top-16 left-0 w-full sm:w-auto z-10 sm:z-auto px-4 sm:px-0 py-4 sm:py-0 rounded-b-lg sm:rounded-none`}
-      >
-        <li className="hover:underline"><a href="#home">Home</a></li>
-        <li className="hover:underline"><a href="#features">Features</a></li>
-        <li className="hover:underline"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  );
-};
+    <div className="relative w-screen h-screen overflow-hidden">
+      {/* Background YouTube Video */}
+      <div className="absolute inset-0 z-0">
+        <div className="w-[177.77vh] h-screen absolute top-0 left-1/2 -translate-x-1/2">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/ymRGlHe5CLE?autoplay=1&mute=1&controls=0&loop=1&playlist=ymRGlHe5CLE&modestbranding=1&rel=0&showinfo=0"
+            title="Background Video"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
 
-export default Navbar;
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/70 z-10"></div>
+
+      {/* Foreground Content */}
+      <div className="relative z-20 w-full h-full flex items-center justify-center px-4 md:px-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-6xl">
+          {/* Text Block */}
+          <div className="bg-black/80 text-white rounded-lg p-6 w-full md:w-[42%] max-w-md">
+            <h1 className="text-xl md:text-2xl font-bold mb-4 leading-snug">
+              Citadel 7 Corporate Tower – The Future of Real Estate Investing in Pakistan
+            </h1>
+            <p className="text-sm md:text-base">
+              Citadel 7 by Chakor Ventures is a CDA-approved corporate tower in Blue Area, Islamabad.
+              If you're exploring real estate investing in Pakistan, this is one of the best and safest investment options available today.
+            </p>
+          </div>
+
+          {/* Login Form Block */}
+          <div className="bg-black/80 rounded-lg p-6 w-full md:w-[32%] max-w-sm">
+            <LoginForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Hero
